@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qihao Liang — Sociology, University of Michigan</title>
+  <meta name="description" content="Personal website of Qihao Liang (梁棋皓), sociologist-in-training at the University of Michigan. Research on migration, citizenship, and state institutions across the Taiwan Strait." />
+  <meta name="author" content="Qihao Liang" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Qihao Liang — Sociology, University of Michigan" />
+  <meta property="og:description" content="Migration, citizenship, and state institutions across the Taiwan Strait." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ---------- Tokens ---------- */
+    :root {
+      --bg:        #F3EEE2;   /* warm cream, paper feel */
+      --bg-soft:   #ECE4D2;   /* slightly darker panel */
+      --ink:       #1A1815;   /* warm near-black */
+      --ink-2:     #423D34;   /* warm dark gray */
+      --ink-3:     #756E61;   /* warm mid gray */
+      --rule:      #CDC3AE;   /* divider */
+      --accent:    #7A2A1C;   /* deep cinnabar / oxblood */
+      --accent-2:  #B45A3F;   /* lighter, used sparingly */
+      --shadow:    0 1px 0 rgba(26,24,21,0.08);
+      --max-w:     980px;
+      --gutter:    clamp(1.25rem, 4vw, 3rem);
+    }
+
+    /* ---------- Reset ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'EB Garamond', 'Cambria', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.6;
+      font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Subtle paper grain */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(rgba(26,24,21,0.025) 1px, transparent 1px);
+      background-size: 3px 3px;
+      mix-blend-mode: multiply;
+      opacity: 0.6;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+    }
+    a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- Top Nav ---------- */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      background: rgba(243, 238, 226, 0.82);
+      border-bottom: 1px solid var(--rule);
+    }
+    .topnav-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: .9rem var(--gutter);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      gap: 2rem;
+    }
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: .01em;
+      border: none;
+    }
+    .brand:hover { color: var(--accent); }
+    .brand-zh {
+      font-family: 'EB Garamond', serif;
+      color: var(--ink-3);
+      margin-left: .5rem;
+      font-size: .95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      list-style: none;
+      margin: 0; padding: 0;
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+    }
+    .nav-links a {
+      border: none;
+      color: var(--ink-2);
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      .nav-links { gap: 1rem; font-size: .72rem; letter-spacing: .08em; }
+      .brand-zh { display: none; }
+      .topnav-inner { gap: 1rem; }
+    }
+    @media (max-width: 520px) {
+      .nav-links { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: clamp(4rem, 12vh, 8rem) 0 clamp(3rem, 8vh, 5rem);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .eyebrow {
+      font-family: 'Fraunces', serif;
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin: 0 0 .35em;
+      font-variation-settings: "opsz" 144;
+    }
+    .hero h1 .zh {
+      display: block;
+      font-size: .42em;
+      color: var(--ink-3);
+      font-weight: 400;
+      letter-spacing: .08em;
+      margin-top: .55em;
+    }
+
+    .hero-tagline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      max-width: 38em;
+      color: var(--ink-2);
+      margin: 1.5rem 0 0;
+      line-height: 1.4;
+    }
+
+    .hero-meta {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.25rem;
+      font-size: .95rem;
+      color: var(--ink-2);
+    }
+    .hero-meta .label {
+      display: block;
+      font-family: 'Fraunces', serif;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: .2rem;
+      font-weight: 500;
+    }
+
+    /* ---------- Section ---------- */
+    section.block {
+      padding: clamp(3rem, 8vh, 5.5rem) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    section.block:last-of-type { border-bottom: none; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 12rem 1fr;
+      gap: 2rem;
+      align-items: baseline;
+      margin-bottom: 2.5rem;
+    }
+    .section-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: .9rem;
+      color: var(--accent);
+      letter-spacing: .05em;
+    }
+    .section-num::before {
+      content: "§ ";
+      font-style: normal;
+    }
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+      letter-spacing: -0.01em;
+      margin: 0;
+      color: var(--ink);
+      font-variation-settings: "opsz" 80;
+    }
+
+    @media (max-width: 720px) {
+      .section-head { grid-template-columns: 1fr; gap: .25rem; margin-bottom: 1.75rem; }
+    }
+
+    /* ---------- Prose ---------- */
+    .prose p {
+      margin: 0 0 1.1em;
+      max-width: 38em;
+    }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose em { color: var(--ink-2); }
+
+    /* ---------- Project cards ---------- */
+    .project {
+      display: grid;
+      grid-template-columns: 12rem 1fr;
+      gap: 2rem;
+      padding: 2.25rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    .project:first-of-type { border-top: 1px solid var(--ink); border-top-width: 2px; }
+
+    .project-aside {
+      font-size: .85rem;
+      color: var(--ink-3);
+    }
+    .project-aside .role {
+      font-family: 'Fraunces', serif;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      display: block;
+      margin-bottom: .35rem;
+    }
+    .project-aside .meta {
+      display: block;
+      margin-top: .5rem;
+      line-height: 1.5;
+    }
+    .project-aside .meta strong {
+      color: var(--ink-2);
+      font-weight: 500;
+    }
+
+    .project h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(1.25rem, 2vw, 1.55rem);
+      line-height: 1.25;
+      margin: 0 0 .4rem;
+      letter-spacing: -0.005em;
+    }
+    .project h3 .subtitle {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink-2);
+      font-size: .85em;
+      margin-top: .15em;
+    }
+
+    .project .lede {
+      font-style: italic;
+      color: var(--ink-2);
+      max-width: 38em;
+      margin: .6rem 0 1rem;
+    }
+    .project .body {
+      max-width: 38em;
+    }
+    .project .body p { margin: 0 0 1em; }
+
+    .project .awards {
+      margin-top: 1.1rem;
+      padding-top: 1rem;
+      border-top: 1px dotted var(--rule);
+      font-size: .9rem;
+      color: var(--ink-2);
+      font-style: italic;
+      max-width: 38em;
+    }
+
+    @media (max-width: 720px) {
+      .project { grid-template-columns: 1fr; gap: .75rem; }
+      .project-aside { font-size: .8rem; }
+    }
+
+    /* ---------- Citation list ---------- */
+    .cite-list {
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .cite-list li {
+      padding: 1.4rem 0;
+      border-top: 1px solid var(--rule);
+      max-width: 44em;
+    }
+    .cite-list li:first-child { border-top: 2px solid var(--ink); }
+    .cite-list .year {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--accent);
+      font-size: .9rem;
+      margin-right: .5rem;
+    }
+    .cite-list .title {
+      font-style: italic;
+      color: var(--ink);
+    }
+    .cite-list .venue {
+      color: var(--ink-2);
+    }
+    .cite-list .note {
+      display: block;
+      margin-top: .35rem;
+      font-size: .9rem;
+      color: var(--ink-3);
+    }
+
+    /* ---------- Two-col CV blocks ---------- */
+    .cv-block { margin-top: 2rem; }
+    .cv-block:first-child { margin-top: 0; }
+    .cv-block h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-variation-settings: "opsz" 80;
+      font-size: 1.05rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 0 0 1.2rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    .entry:first-of-type { border-top: none; padding-top: 0; }
+    .entry .when {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--ink-3);
+      font-size: .92rem;
+      padding-top: .15rem;
+    }
+    .entry .what { max-width: 40em; }
+    .entry .what .title {
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .entry .what .where {
+      display: block;
+      color: var(--ink-2);
+      font-style: italic;
+      font-size: .95rem;
+      margin-top: .15rem;
+    }
+    .entry .what .desc {
+      display: block;
+      margin-top: .55rem;
+      color: var(--ink-2);
+      font-size: .96rem;
+    }
+    .entry .what .award-amt {
+      color: var(--accent);
+      font-style: italic;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 720px) {
+      .entry { grid-template-columns: 1fr; gap: .25rem; }
+      .entry .when { padding-top: 0; font-size: .85rem; }
+    }
+
+    /* ---------- Awards two-col ---------- */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 2rem;
+    }
+    @media (max-width: 720px) {
+      .awards-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Skills ---------- */
+    .skills-row {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1.5rem;
+      padding: .85rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    .skills-row:first-child { border-top: none; padding-top: 0; }
+    .skills-row .label {
+      font-family: 'Fraunces', serif;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      padding-top: .25rem;
+    }
+    .skills-row .body {
+      color: var(--ink-2);
+    }
+    @media (max-width: 720px) {
+      .skills-row { grid-template-columns: 1fr; gap: .25rem; }
+      .skills-row .label { padding-top: 0; }
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      padding: clamp(3rem, 8vh, 5rem) 0 clamp(4rem, 10vh, 6rem);
+    }
+    .contact h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 1rem;
+      letter-spacing: -0.01em;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .contact-grid .label {
+      font-family: 'Fraunces', serif;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: .35rem;
+    }
+    .contact-grid .value {
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    /* ---------- Footer ---------- */
+    footer.foot {
+      padding: 2rem 0 3rem;
+      border-top: 1px solid var(--rule);
+      font-size: .82rem;
+      color: var(--ink-3);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer.foot .rule {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+
+    /* ---------- Reveal on load ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: rise .8s ease forwards;
+    }
+    .reveal.d1 { animation-delay: .05s; }
+    .reveal.d2 { animation-delay: .18s; }
+    .reveal.d3 { animation-delay: .32s; }
+    .reveal.d4 { animation-delay: .46s; }
+    @keyframes rise {
+      to { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; animation: none; }
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      .topnav, footer.foot, .hero-meta a[href]::after { display: none !important; }
+      body { background: white; color: black; font-size: 11pt; }
+      body::before { display: none; }
+      section.block { break-inside: avoid; padding: 1rem 0; border-bottom: 1px solid #999; }
+      a { color: black; border: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Top Nav ===== -->
+  <nav class="topnav" aria-label="Primary">
+    <div class="topnav-inner">
+      <a href="#top" class="brand">Qihao Liang<span class="brand-zh">梁棋皓</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header id="top" class="hero">
+    <div class="container">
+      <div class="eyebrow reveal d1">Sociology · University of Michigan</div>
+      <h1 class="reveal d2">
+        Qihao Liang
+        <span class="zh">梁棋皓</span>
+      </h1>
+      <p class="hero-tagline reveal d3">
+        I study international migration, citizenship, and state institutions, with a particular focus on cross-Strait mobility between Mainland China and Taiwan.
+      </p>
+
+      <div class="hero-meta reveal d4">
+        <div>
+          <span class="label">Affiliation</span>
+          University of Michigan, Ann Arbor
+        </div>
+        <div>
+          <span class="label">Email</span>
+          <a href="mailto:qihaol@umich.edu">qihaol@umich.edu</a>
+        </div>
+        <div>
+          <span class="label">Pronouns</span>
+          he / him
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="prose">
+          <p>
+            I am completing a Bachelor of Arts in Sociology with Highest Honors at the University of Michigan, Ann Arbor (May 2026), with a minor in Anthropology. My honors thesis, advised by Professor Jaeeun Kim, examines how contested sovereignty between Mainland China and Taiwan structures educational migration, the conversion of credentials, and the boundaries of membership.
+          </p>
+          <p>
+            Methodologically, I work primarily in qualitative sociology — in-depth interviewing, fieldwork, and archival research — while also using R, Stata, and administrative datasets when the question calls for them. My broader interests sit at the intersection of migration studies, the sociology of the state and law, and East Asian Studies.
+          </p>
+          <p>
+            Before transferring to Michigan, I completed coursework toward a Bachelor of Laws in Political Science at Zhejiang University and spent a year as a Visiting Student in Sociology at UC Berkeley. I have held research assistantships at UC Berkeley, the University of Michigan, and Hamad Bin Khalifa University.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section id="research" class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Research</h2>
+        </div>
+
+        <article class="project">
+          <aside class="project-aside">
+            <span class="role">Honors Thesis · Manuscript in Preparation</span>
+            <span class="meta"><strong>Advisor:</strong> Prof. Jaeeun Kim</span>
+            <span class="meta"><strong>Coordinator:</strong> Prof. Karin A. Martin</span>
+            <span class="meta"><strong>Methods:</strong> 52 semi-structured interviews · fieldwork in Taiwan · archival research</span>
+          </aside>
+          <div>
+            <h3>
+              A Tale of Two Shores
+              <span class="subtitle">Contested Membership and Educational Migration between Mainland China and Taiwan</span>
+            </h3>
+            <p class="lede">
+              How does contested sovereignty reshape the value of cross-border education?
+            </p>
+            <div class="body">
+              <p>
+                Scholarship on the internationalization of higher education often assumes that cross-border study loosens the ties among territory, membership, and educational value. This study shows that under contested sovereignty, cross-border study can instead make educational value more dependent on political classification and institutional recognition.
+              </p>
+              <p>
+                Drawing on 52 semi-structured interviews, fieldwork in Taiwan, and archival research, the analysis argues that cross-Strait educational migration is organized through a contested membership infrastructure: legal classifications, admissions systems, required documentation, recognition rules, and intermediary organizations. These arrangements permit enrollment yet also determine whether students can convert education into rights, recognized credentials, and future migration opportunities.
+              </p>
+              <p>
+                Many mainland Chinese families turn to Taiwan as a credential-repair route when gaokao outcomes close off better options; admission, however, does not secure stable study or a normal study-to-work-to-settlement pathway. Mainland Chinese students move through a fragile “two-key system,” and the value of Taiwan-earned education depends on where it is later evaluated. A comparison with Taiwanese students in mainland China shows that contested sovereignty produces differential inclusion and renders educational value deeply contingent on political classification and institutional recognition.
+              </p>
+            </div>
+            <div class="awards">
+              Recognized by the Marshall Sahlins Social Science Award (2026), the Charles and Myrl Hucker Essay Prize (2025), and the Pamela J. MacKintosh Undergraduate Research Award — 1st Place, Global Project Category (2025).
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <aside class="project-aside">
+            <span class="role">Co-authored · Manuscript in Preparation</span>
+            <span class="meta"><strong>Advisors:</strong> Prof. Yu-Ling Chang, Prof. Danya Lagos, Taylor Brown (UC Berkeley)</span>
+            <span class="meta"><strong>Data:</strong> California Cal-OAR (2021–2023)</span>
+            <span class="meta"><strong>Methods:</strong> ANOVA · multivariable regression</span>
+          </aside>
+          <div>
+            <h3>
+              County Racial Distribution and Racial Disparities in Welfare Sanctions
+              <span class="subtitle">Group Threat and Contact Theories in California’s TANF System</span>
+            </h3>
+            <p class="lede">
+              Does local racial composition shape who gets sanctioned in U.S. welfare administration?
+            </p>
+            <div class="body">
+              <p>
+                Drawing on California’s Cal-OAR dataset (2021–2023), this study employs ANOVA and multivariable regression to examine how county-level racial composition affects welfare sanction rates under Temporary Assistance for Needy Families. Sanction rates are elevated for Asian recipients, in tension with prevailing “model minority” framings; more racially balanced counties are associated with reduced sanction disparities, with effect sizes that vary by racial group.
+              </p>
+            </div>
+            <div class="awards">
+              Recognized by the Mark Chesler Student Research Award (2024), University of Michigan Department of Sociology.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Writing & Talks ===== -->
+    <section id="writing" class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title">Writing &amp; Talks</h2>
+        </div>
+
+        <div class="cv-block">
+          <h3>Manuscripts in Preparation</h3>
+          <ul class="cite-list">
+            <li>
+              Liang, Qihao. <span class="title">“A Tale of Two Shores: Contested Membership and Educational Migration between Mainland China and Taiwan.”</span>
+              <span class="venue">Manuscript in preparation, based on Honors Thesis (with Highest Honors), University of Michigan.</span>
+            </li>
+            <li>
+              Liang, Qihao. <span class="title">“County Racial Distribution and Racial Disparities in Welfare Sanctions: Group Threat and Contact Theories in California’s TANF System.”</span>
+              <span class="venue">Manuscript in preparation.</span>
+              <span class="note">Advisors: Prof. Yu-Ling Chang, Prof. Danya Lagos, and Taylor Brown (UC Berkeley).</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-block">
+          <h3>Other Writing</h3>
+          <ul class="cite-list">
+            <li>
+              <span class="year">2025</span>
+              Liang, Qihao. <span class="title">“Walking, Talking, and Getting Lost in Taiwan: A U-M Library Student Mini Grant Project.”</span>
+              <span class="venue"><em>U-M Library Blogs — Student Stories</em>, September 8.</span>
+              <span class="note">
+                <a href="https://blogs.lib.umich.edu/student-stories/walking-talking-and-getting-lost-taiwan-u-m-library-student-mini-grant-project" target="_blank" rel="noopener">
+                  blogs.lib.umich.edu →
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-block">
+          <h3>Conference Presentations</h3>
+          <ul class="cite-list">
+            <li>
+              <span class="year">2025</span>
+              Liang, Qihao. <span class="title">“A Tale of Two Shores: Mainland China–Taiwan Migration from 2008 to 2024.”</span>
+              <span class="venue">Paper presented at the Association for Asian Studies (AAS) Annual Conference, March 13–16, Columbus, OH.</span>
+            </li>
+            <li>
+              <span class="year">2024</span>
+              Liang, Qihao. <span class="title">“Divergent Paths toward Global Citizens: Transborder Ethnic Membership, Cross-Taiwan Strait Mobility, and Onward Migration Prospects among Taiwanese Businesspeople in Mainland China and Mainland Chinese Students in Taiwan.”</span>
+              <span class="venue">Paper presented at the 30th Columbia University Graduate Student Conference on East Asia (EALAC GradCon), October 18–19, New York, NY.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CV ===== -->
+    <section id="cv" class="block">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Curriculum</h2>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-block">
+          <h3>Education</h3>
+
+          <div class="entry">
+            <div class="when">May 2026</div>
+            <div class="what">
+              <span class="title">Bachelor of Arts in Sociology, with Highest Honors · GPA 4.00/4.00</span>
+              <span class="where">University of Michigan, Ann Arbor</span>
+              <span class="desc">
+                Honors Thesis: <em>A Tale of Two Shores: Contested Membership and Educational Migration between Mainland China and Taiwan.</em><br />
+                Advisor: Prof. Jaeeun Kim. Thesis Coordinator: Prof. Karin A. Martin.
+              </span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">Jan – Dec 2023</div>
+            <div class="what">
+              <span class="title">Visiting Student in Sociology · GPA 4.00/4.00</span>
+              <span class="where">University of California, Berkeley</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">Sep 2021 – Dec 2023</div>
+            <div class="what">
+              <span class="title">Bachelor of Laws coursework, Political Science · GPA 3.98/4.00</span>
+              <span class="where">Zhejiang University, Hangzhou (transferred to Michigan)</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">Coursework</div>
+            <div class="what">
+              <span class="title">Doctoral-level &amp; selected coursework</span>
+              <span class="desc">
+                Qualitative Research Methods · Methods of Sociological Research · Data Analysis in Education Research · American Immigration · Introduction to Primary Sources and Archives · In-Depth Interviewing · Migration, Exile, and Political Rights · International Migration and the Politics of Membership in a Globalizing World.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Experience -->
+        <div class="cv-block">
+          <h3>Research Experience</h3>
+
+          <div class="entry">
+            <div class="when">Jul 2024 – Present</div>
+            <div class="what">
+              <span class="title">Research Assistant · MENA Social Inclusion Project</span>
+              <span class="where">Hamad Bin Khalifa University. Supervisor: Prof. Anis Ben Brik.</span>
+              <span class="desc">
+                Synthesized 89 academic articles into a literature review on social inclusion across the Middle East and North Africa; cleaned and translated survey data from 10 MENA countries for cross-national quantitative analysis in R and Stata.
+              </span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">Jan – May 2024</div>
+            <div class="what">
+              <span class="title">Research Assistant · Blood Veins for Hire Project</span>
+              <span class="where">University of Michigan, Ann Arbor. Supervisor: Analidis Ochoa, PhD Candidate.</span>
+              <span class="desc">
+                Reviewed 31 studies on blood plasma collection in the United States; conducted archival research on 14 U.S. prison newspapers (1963–1983), coding articles in Zotero and MAXQDA.
+              </span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">Jul – Dec 2023</div>
+            <div class="what">
+              <span class="title">Research Assistant · Global Welfare Regime Project</span>
+              <span class="where">University of California, Berkeley. Supervisor: Prof. Yu-Ling Chang.</span>
+              <span class="desc">
+                Drafted a comparative report on data sources, eligibility rules, and reporting standards across U.S. state-level TANF programs; developed R scripts to clean and merge longitudinal Cal-OAR administrative data; extended the CalWORKs OAR Data Visualization Tool by adding regression functionality and updating visualization components.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Honors & Awards (selected) -->
+        <div class="cv-block">
+          <h3>Honors, Awards &amp; Fellowships</h3>
+
+          <div class="awards-grid">
+            <div>
+              <div class="entry">
+                <div class="when">2026</div>
+                <div class="what">
+                  <span class="title">Marshall Sahlins Social Science Award</span>
+                  <span class="where">LSA Honors Program, U-M · <span class="award-amt">$2,000</span></span>
+                  <span class="desc">For an outstanding honors thesis in the social sciences.</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Honors Summer Fellowship</span>
+                  <span class="where">LSA Honors Program, U-M · <span class="award-amt">$10,000</span></span>
+                  <span class="desc">Competitive eight-week interdisciplinary fellowship for honors thesis research.</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">James B. Angell Scholar</span>
+                  <span class="where">University of Michigan</span>
+                  <span class="desc">For two or more consecutive all-A semesters.</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Charles and Myrl Hucker Essay Prize</span>
+                  <span class="where">Department of Asian Languages and Cultures, U-M</span>
+                  <span class="desc">Best undergraduate essay on China in an Asian Studies course.</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Pamela J. MacKintosh Award — 1st Place, Global Project</span>
+                  <span class="where">U-M Library · <span class="award-amt">$1,500</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Global Individual Grant</span>
+                  <span class="where">International Institute, U-M · <span class="award-amt">$3,000</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Honors Research Grant</span>
+                  <span class="where">LSA Honors Program, U-M · <span class="award-amt">$2,000</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025 &amp; 26</div>
+                <div class="what">
+                  <span class="title">Pryor &amp; Dickinson Family Scholarships</span>
+                  <span class="where">Global Scholars Program, U-M</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Souza Family Leadership Scholarship</span>
+                  <span class="where">Dean of Students Office, U-M · <span class="award-amt">$1,500</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2025</div>
+                <div class="what">
+                  <span class="title">Library Mini Grant</span>
+                  <span class="where">U-M Library · <span class="award-amt">$1,000</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2024</div>
+                <div class="what">
+                  <span class="title">Mark Chesler Student Research Award</span>
+                  <span class="where">Department of Sociology, U-M</span>
+                  <span class="desc">For undergraduate scholarship contributing to sociological understandings of diversity, social justice, and intergroup relations.</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2024</div>
+                <div class="what">
+                  <span class="title">S&amp;S Scholarship Fund for International Students</span>
+                  <span class="where">International Center, U-M · <span class="award-amt">$6,000</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2024</div>
+                <div class="what">
+                  <span class="title">Student Speaker Travel Grant</span>
+                  <span class="where">Association for Asian Studies (AAS) Annual Conference</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2024</div>
+                <div class="what">
+                  <span class="title">Grand Prize, Final Project, EECS 183</span>
+                  <span class="where">College of Engineering, U-M</span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2023</div>
+                <div class="what">
+                  <span class="title">Student Research Training Program (National-Level)</span>
+                  <span class="where">Zhejiang University · <span class="award-amt">¥24,000</span></span>
+                </div>
+              </div>
+
+              <div class="entry">
+                <div class="when">2023</div>
+                <div class="what">
+                  <span class="title">Third Fei Hsiao-tung Fieldwork Grant</span>
+                  <span class="where">Shanghai University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div class="cv-block">
+          <h3>Professional Service &amp; Campus Involvement</h3>
+
+          <div class="entry">
+            <div class="when">2025 – 2026</div>
+            <div class="what">
+              <span class="title">Committee Member · Undergraduate Research Symposium (URS)</span>
+              <span class="where">University of Michigan, Ann Arbor</span>
+              <span class="desc">
+                Led outreach and funding solicitation for the annual symposium; co-organized a research workshop in collaboration with the U-M Library; represented the committee in a presentation at the U-M Library Mini Grant program.
+              </span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="when">2024 – 2026</div>
+            <div class="what">
+              <span class="title">Member · Global Scholars Program</span>
+              <span class="where">University of Michigan, Ann Arbor</span>
+              <span class="desc">
+                Selective residential community of students from over 30 nationalities. Partnered with Amnesty International on its annual <em>Write for Rights</em> letter-writing campaign; co-facilitated student dialogues on global human rights and cross-cultural issues.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="cv-block">
+          <h3>Languages, Methods &amp; Tools</h3>
+
+          <div class="skills-row">
+            <div class="label">Languages</div>
+            <div class="body">Mandarin Chinese — native speaker. English — full professional proficiency (IELTS 7.5).</div>
+          </div>
+
+          <div class="skills-row">
+            <div class="label">Qualitative</div>
+            <div class="body">In-depth and semi-structured interviewing; ethnographic fieldwork; archival research; grounded-theory and thematic coding.</div>
+          </div>
+
+          <div class="skills-row">
+            <div class="label">Quantitative</div>
+            <div class="body">Descriptive statistics; ANOVA; ordinary least squares and multivariable regression; cleaning and merging of administrative datasets.</div>
+          </div>
+
+          <div class="skills-row">
+            <div class="label">Software</div>
+            <div class="body">R, Stata, Python; MAXQDA, ATLAS.ti; Zotero.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <span class="eyebrow">§ 05 · Get in touch</span>
+        <h2>Always glad to hear from <em>fellow readers, writers, and travelers.</em></h2>
+        <p class="prose" style="max-width: 36em; color: var(--ink-2);">
+          I welcome correspondence about cross-Strait migration, citizenship, and qualitative methods, as well as collaboration with fellow undergraduate and graduate researchers working on East Asia. Drop a line in English or 中文.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:qihaol@umich.edu">qihaol@umich.edu</a></div>
+          </div>
+          <div>
+            <div class="label">Location</div>
+            <div class="value">Ann Arbor, Michigan</div>
+          </div>
+          <div>
+            <div class="label">Curriculum Vitae</div>
+            <div class="value"><a href="./Liang_Qihao_CV.pdf">Download PDF →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+      <span>© 2026 Qihao Liang · Last updated May 2026</span>
+      <span class="rule">Set in Fraunces &amp; EB Garamond.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
